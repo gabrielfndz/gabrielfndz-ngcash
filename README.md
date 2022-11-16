@@ -1,4 +1,4 @@
-Sobre o projeto
+## Sobre o projeto
 Respositório para a disposição da aplicação requirida pelo Teste técnico da empresa NG.CASH.
 
 <h4>Tecnológias utilizadas no FRONT-END</h5>
