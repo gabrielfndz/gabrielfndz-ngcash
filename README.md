@@ -1,11 +1,12 @@
 Sobre o projeto
 Respositório para a disposição da aplicação requirida pelo Teste técnico da empresa NG.CASH.
 
-Tecnológias utilizadas no FRONT-END
+<h5>Tecnológias utilizadas no FRONT-END</h5>
 - React.js
 - React Router
 - React Hooks
-Tecnológias utilizadas no BACK-END
+
+<h5>Tecnológias utilizadas no BACK-END</h5>
 - Node.js
 - DotEnv
 - Express
