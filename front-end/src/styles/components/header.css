@@ -1,0 +1,31 @@
+.header{
+  width: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  color: #fff;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  justify-self: unset;
+}
+
+.header-nav {
+  justify-content: center;
+  display: flex;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.header-logout {
+  padding: 10px;
+  justify-content: flex-end;
+}
