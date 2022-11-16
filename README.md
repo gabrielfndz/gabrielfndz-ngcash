@@ -1,18 +1,18 @@
 Sobre o projeto
 Respositório para a disposição da aplicação requirida pelo Teste técnico da empresa NG.CASH.
 
-<h5>Tecnológias utilizadas no FRONT-END</h5>
-- React.js
-- React Router
-- React Hooks
+<h4>Tecnológias utilizadas no FRONT-END</h5>
+<h5>- React.js</h5>
+<h5>- React Router</h5>
+<h5>- React Hooks</h5>
 
 <h5>Tecnológias utilizadas no BACK-END</h5>
-- Node.js
-- DotEnv
-- Express
-- Postgres
-- Sequelize
-- Typescript
+<h5>- Node.js</h5>
+<h5>- DotEnv</h5>
+<h5>- Express</h5>
+<h5>- Postgres</h5>
+<h5>- Sequelize</h5>
+<h5>- Typescript</h5>
 
 Instalação e iniciando a aplicação
 !!! Será preciso ter os pacotes npm, npx, e node instalados em sua maquina !!!
