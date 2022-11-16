@@ -4,12 +4,13 @@ import handleFetch from '../services/requests';
 import '../styles/pages/login.css'
 
 const Login = () => {
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [isLogged, setIsLogged] = useState(false);
+
+
   
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async () => {
     try {
       const user = await handleFetch('POST', '/login', { username, password })
       localStorage.setItem('user', user.username);
@@ -19,7 +20,6 @@ const Login = () => {
       }
     } catch (e) {
       setIsLogged(false);
-      console.log(e.message);
     }
   }
 
@@ -53,7 +53,7 @@ const Login = () => {
             <button
               className="login-btn"
               type="button"
-              onClick={ (event) => handleSubmit(event) }
+              onClick={ handleSubmit }
             >
               Login
             </button>            

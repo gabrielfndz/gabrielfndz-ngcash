@@ -31,7 +31,6 @@ const Transaction = () => {
       }
     } catch (e) {
       setSuccess(false);
-      console.log(e.message);
     }
 
   }

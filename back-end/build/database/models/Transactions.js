@@ -22,14 +22,15 @@ Transactions.init({
         allowNull: false,
     },
     value: {
-        type: sequelize_1.INTEGER,
+        type: sequelize_1.REAL,
         allowNull: false,
     },
 }, {
     sequelize: _1.default,
     modelName: 'Transactions',
     timestamps: true,
+    updatedAt: false,
 });
-Transactions.hasOne(Accounts_1.default, { foreignKey: 'debitedAccount', as: 'id' });
-Transactions.hasOne(Accounts_1.default, { foreignKey: 'creditedAccount', as: 'id' });
+Transactions.belongsTo(Accounts_1.default, { foreignKey: 'debitedAccount', as: 'debAccount' });
+Transactions.belongsTo(Accounts_1.default, { foreignKey: 'creditedAccount', as: 'credAccount' });
 //# sourceMappingURL=Transactions.js.map

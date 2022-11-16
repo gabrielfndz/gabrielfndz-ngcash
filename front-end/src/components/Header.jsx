@@ -14,8 +14,10 @@ const Header = () => {
   return (
    <header className="header">
     <div className="header-nav"> 
-      <h1>Ng.Cash</h1>
-      <a href="/transactions"> Minhas Transações</a>
+      <a href="/dashboard">
+       <h1>Ng</h1>
+      </a>
+      <a className="a-nav" href="/transactions"> Minhas Transações</a>
     </div>
     <Button 
       variant='outline-light'

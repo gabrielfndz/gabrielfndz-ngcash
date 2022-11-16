@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import moment from 'moment';
 import Header from '../components/Header';
 import handleFetch from '../services/requests';
+
 
 import { 
   Card,  
@@ -12,13 +14,14 @@ import {
 } from 'react-bootstrap';
 
 const Dashboard = () => {
-  const [user, setUser] = useState([]); 
+  const [user, setUser] = useState(''); 
   const [account, setAccount] = useState([]);
   const [transactions, setTransactions] = useState([])
 
   useEffect(() => {
     const getUserInfos = async () => {
       const userData = await handleFetch('GET', '/dashboard')
+      console.log(userData)
       setUser(userData);
       setAccount(userData.Accounts);
     }
@@ -39,7 +42,7 @@ const Dashboard = () => {
     <Header />
     <Container>
       <Row className='mt-5'>
-        <Col xs={4} md={4} sm={12}>
+        <Col xs={12} md={12} sm={12}>
           <Card
             bg='ark'
             style={{ height: '10em' }}
@@ -61,13 +64,14 @@ const Dashboard = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={8} md={8} sm={12}>
-          <h1>Minhas Transações</h1>
+        <Col xs={12} md={12} sm={12} className="mt-5">
+          <h1>Últimas Transações</h1>
           <Table striped>
             <thead>
               <tr>
                 <th>De</th>
                 <th>Para</th>
+                <th>Data</th>
                 <th>Valor</th>
               </tr>
             </thead>
@@ -77,6 +81,7 @@ const Dashboard = () => {
                 <tr key={ t.id }>
                   <td>{ t.debAccount.Users.username }</td>
                   <td>{ t.credAccount.Users.username  }</td>
+                  <td>{ moment(t.createdAt).format('DD/MM/YYYY') }</td>
                   <td>{ t.value }</td>
                 </tr>)
               }

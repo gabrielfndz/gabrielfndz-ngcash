@@ -25,6 +25,10 @@
   margin-left: 30px;
 }
 
+.a-nav {
+  margin-top: 15px;
+}
+
 .header-logout {
   padding: 10px;
   justify-content: flex-end;

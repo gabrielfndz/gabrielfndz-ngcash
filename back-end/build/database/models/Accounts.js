@@ -14,7 +14,7 @@ Accounts.init({
         autoIncrement: true,
     },
     balance: {
-        type: sequelize_1.INTEGER,
+        type: sequelize_1.REAL,
         allowNull: false,
     }
 }, {
@@ -23,4 +23,7 @@ Accounts.init({
     timestamps: false,
 });
 Accounts.hasOne(Users_1.default, { foreignKey: 'accountId', as: 'Users' });
+Users_1.default.belongsTo(Accounts, { foreignKey: 'accountId', as: 'Accounts' });
+// Accounts.belongsTo(Transactions, { foreignKey: 'creditedAccount', as: 'credited'});
+// Accounts.belongsTo(Transactions, { foreignKey: 'debitedAccount', as : 'debited'});
 //# sourceMappingURL=Accounts.js.map
