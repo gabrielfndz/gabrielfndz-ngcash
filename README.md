@@ -36,4 +36,8 @@ Entre no diretório front-end
 
 Instale as dependências, utilizando npm install
 
-Utilize o comando npm start para iniciar a aplicação em seu navegador
+Utilize o comando <code>npm start</code> para iniciar a aplicação em seu navegador
+
+<h2>A Aplicação</h2>
+<h4>Página de Login</h4>
+![login page](https://i.ibb.co/VpWVdPj/Captura-de-Tela-2022-11-16-a-s-12-50-53.png)
