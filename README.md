@@ -18,22 +18,20 @@ Instalação e iniciando a aplicação
 
 Clone o repositório através da seguinte chave https: git@github.com:gabrielfndz/gabrielfndz-ngcash.git
 BACK-END
-Entre no diretório como back-end
+Entre no diretório back-end
 
 Instale as dependências, utilizando npm install
 
-Entre no diretório src e modifique o arquivo .envEXAMPLE com as portas e saidas da sua máquina
+Entre no diretório src e modifique o arquivo <code>.envEXAMPLE</code> com as portas e saidas da sua máquina
 
 !!! Não se esqueça de retirar o EXAMPLE do seu nome !!!
 
-Ainda no diretório de back-end, use o comando <code>npm run dev</code> para criar, popular o banco de dados e rodar sua aplicação no modo depuração
+Ainda no diretório de back-end, use o comando <code>npm run dev</code> para criar, popular o banco de dados e rodar sua aplicação no modo depuração.
 
-Utilize o comando npm start para ativar o servidor e disponibilizar a API
+Para resetar o banco de dados, use o comando <code>npm run db:reset</code>
 
 FRONT-END
-Abra outra aba do seu terminal
-
-Entre no diretório nomeado como front-end
+Entre no diretório front-end
 
 Instale as dependências, utilizando npm install
 
