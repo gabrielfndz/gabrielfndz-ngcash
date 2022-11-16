@@ -17,6 +17,12 @@ class TransactionService {
                     as: 'Accounts'
                 }
             });
+            const debBalance = await this._accounts.findOne({
+                where: { id: debUser.accountId }
+            });
+            if (debBalance.balance < 0) {
+                return null;
+            }
             const credUser = await this._user.findOne({
                 where: { username: credAccount },
                 include: {

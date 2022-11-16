@@ -10,8 +10,8 @@ export default class TransactionController {
       const { debitedAccount, creditedAccount, value } = req.body;
       const newTransaction = await this.transactionService.create(debitedAccount, creditedAccount, value)
       return res.status(200).json(newTransaction);
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      return res.status(400).json({message: "Saldo Insuficiente"});
     }
   }
 

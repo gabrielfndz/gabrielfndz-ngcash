@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import { Form, Container, Button } from 'react-bootstrap';
+import { Form, Container, Button, Alert } from 'react-bootstrap';
 import handleFetch from '../services/requests';
 import { Navigate } from 'react-router-dom';
 
@@ -9,6 +9,7 @@ const Transaction = () => {
   const [value, setValue] = useState('');
   const [loggedUser, setLoggedUser] = useState('');
   const [success, setSuccess] = useState(false);
+  const [message, setMessage] = useState('')
 
 
   useEffect(() => {
@@ -26,6 +27,9 @@ const Transaction = () => {
     try {
       const newTransaction = await handleFetch('POST', '/transactions', data)
       console.log(newTransaction);
+      if(newTransaction.message) {
+        return setMessage(newTransaction.message);
+      }  
       if (newTransaction) {
         setSuccess(true);
       }
@@ -41,6 +45,13 @@ const Transaction = () => {
     <>
       <Header />
       <Container className="mt-5">
+       {
+          message ?
+          <Alert variant='danger' className="mt-4">
+            { message }
+          </Alert>
+          : ''
+        }
         <h1>Nova Transação</h1>
         <Form>
           <Form.Group className="mb-3" controlId="formGroupEmail">
@@ -65,6 +76,7 @@ const Transaction = () => {
             Enviar
           </Button>
         </Form>
+       
       </Container>
     </>
   )

@@ -18,6 +18,14 @@ export default class TransactionService {
       }
     }) 
 
+    const debBalance = await this._accounts.findOne({
+      where: { id: debUser.accountId }
+    });
+
+    if(debBalance.balance < 0 || (debBalance.balance - value) < 0) {
+      throw new Error('Saldo Insuficiente');
+    }
+
     
     const credUser = await this._user.findOne({
       where: { username: credAccount },
@@ -26,6 +34,7 @@ export default class TransactionService {
         as: 'Accounts'
       }
     })     
+
     
     if(credUser!.username === debAccount) {
       return null;
