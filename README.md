@@ -23,7 +23,7 @@ Entre no diretório back-end
 
 Instale as dependências, utilizando npm install
 
-Entre no diretório src e modifique o arquivo <code>.envEXAMPLE</code> com as portas e saidas da sua máquina
+Entre no diretório src e modifique o arquivo <code>.env.example</code> com as portas e saidas da sua máquina
 
 !!! Não se esqueça de retirar o EXAMPLE do seu nome !!!
 
