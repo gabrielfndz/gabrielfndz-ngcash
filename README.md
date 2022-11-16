@@ -16,8 +16,9 @@ Tecnológias utilizadas no BACK-END
 Instalação e iniciando a aplicação
 !!! Será preciso ter os pacotes npm, npx, e node instalados em sua maquina !!!
 
-Clone o repositório através da seguinte chave https: git@github.com:gabrielfndz/gabrielfndz-ngcash.git
-BACK-END
+Clone o repositório através da seguinte chave https: <code>git@github.com:gabrielfndz/gabrielfndz-ngcash.git</code>
+
+<h2>BACK-END</h2>
 Entre no diretório back-end
 
 Instale as dependências, utilizando npm install
@@ -30,7 +31,7 @@ Ainda no diretório de back-end, use o comando <code>npm run dev</code> para cri
 
 Para resetar o banco de dados, use o comando <code>npm run db:reset</code>
 
-FRONT-END
+<h2>FRONT-END</h2>
 Entre no diretório front-end
 
 Instale as dependências, utilizando npm install
